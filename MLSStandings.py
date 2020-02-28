@@ -36,18 +36,30 @@ mlsStandings.replace(name_dict, inplace=True)
 
 
 
-mlsStandings = mlsStandings.replace('Kansas City Wiz', 'Sporting Kansas City')
 
 
 
 
 
-new_team_list = pd.DataFrame(mlsStandings.TEAM.unique())
-  
-  
-len(mlsStandings.TEAM.unique())
+
+minlist = pd.DataFrame()
+for i in range(1998,2019):
+    minlist[i] = mlsStandings[mlsStandings["POINTS"]]
+    
+    mlsStandings[]= minlist.append[i]
 
 
-#print(mlsStandings)
+team_count = len(mlsStandings.TEAM.unique())
+
+team_df = pd.DataFrame(mlsStandings.TEAM.unique())
+
+
+
+
+
+
+
+
 
 mlsStandings.to_csv (r'/Users/jacobfericy/GitHub/MLS_Analytics/fullMLSStandings.csv', index = None, header=True)
+
